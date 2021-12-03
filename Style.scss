@@ -1,0 +1,349 @@
+/* skapa variabler */
+$my_background_color:rgb(219, 206, 188);
+$my_background_color2:rgb(243, 241, 236);
+$my_bold:bold;
+$my_width:100%;
+$my_position1:absolute;
+$my_align:center;
+$my_padding_left:10px;
+$my_display:flex;
+
+/* En funktion till bildernas titel p[ sida 2 (hundleksaker och kattleksaker)  */
+@mixin img_h1 {
+    text-align: $my_align;
+    margin: 100px 0px 0px 0px;   
+}
+/* En funktion till fas och fab icon size*/
+@mixin fas_fab_size{
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+}
+
+/*body background*/
+body {
+    background-color: $my_background_color2  !important;
+}
+
+/* Header med NAV-BAR */
+
+.nav a {
+    color: rgb(11, 42, 2);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: $my_bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+}
+
+.nav {
+    background-color: $my_background_color;
+}
+
+
+/* JS JS JS */
+
+/*style till artiklarnas bild container */
+.imgContainer {
+    width: $my_width;
+    display: $my_display;
+    height: 30vw;
+}
+
+/*style till artiklernas bild  */
+.imgContainer img {
+    object-fit: cover;
+    width: $my_width;
+}
+
+
+@media (max-width: 575px) {
+    .imgContainer {
+        height: 60vw;
+    }
+}
+
+/*font är bold på prisen*/
+.font-bold {
+    font-weight: $my_bold;
+}
+
+/* text är green på artikelernas namn och pris*/
+.text-green {
+    color: rgb(67, 119, 15);
+}
+
+/* swadow hover till artiklerna*/
+.shadow-hover:hover {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175)!important;
+}
+
+/* JS JS JS  */
+
+
+/* Carosel*/
+/* storlek till bilderna i caruselen*/
+.d-block {
+    width: 1500px;
+    height: 600px;
+}
+
+
+/*Text*/
+.info1-container {
+    margin: 2% 10% 2% 10%;
+    /* box-sizing: border-box; */
+}
+
+.info1-container a {
+    color: black;
+    font-weight: $my_bold;
+}
+
+/* style container till sidans titel och texten på index och sida 2*/
+.h1-container {
+    background-color: $my_background_color;
+    color: rgb(59, 58, 55);
+    text-align: left;
+    letter-spacing: 5px;
+    padding: 2px 2px 0 0;
+    color: rgb(59, 58, 55);
+    margin: 3% 10% 0% 10%;
+}
+
+.display-4 {
+    margin: 0px 10px 0px 10px;
+}
+
+.main-h4 {
+    margin: 10px 0px 10px 0px;
+}
+
+
+/*  FOOOOOTER   */
+
+footer {
+    position: $my_position1;
+    width: $my_width;
+    background: $my_background_color;
+}
+
+.main-content {
+    display: $my_display;
+}
+
+.main-content .box {
+    flex-basis: 50%;
+    padding: 20px 50px 20px 50px;
+}
+
+.box h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .content:before {
+    position: $my_position1;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: $my_width;
+    background: #1a1a1a;
+}
+
+.box .content:after {
+    position: $my_position1;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: $my_background_color2;
+    top: -10px;
+}
+
+.left .content p {
+    text-align: justify;
+}
+
+.left .content .social {
+    margin: 20px 0 0 0;
+}
+
+.left .content .social a {
+    padding: 0 2px;
+}
+
+.left .content .social a span {
+    @include fas_fab_size();
+    background: #1a1a1a;
+    text-align: $my_align;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: white;
+}
+
+.left .content .social a span:hover {
+    background: firebrick;
+}
+
+.center .content .fas {
+    @include fas_fab_size();
+    font-size: 1.4375rem;
+    background: $my_background_color2;
+    text-align: $my_align;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .content .fas:hover {
+    background: firebrick;
+}
+
+/* style text som ligger på center av footer */
+.center .content .text {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: $my_padding_left;
+}
+
+/*style phone*/
+.center .content .phone {
+    margin: 15px 0;
+}
+
+.right form .text {
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color: black;
+}
+
+.right form .msg {
+    margin-top: 10px;
+}
+
+.right form input,
+.right form textarea {
+    width: $my_width;
+    font-size: 1.0625rem;
+    padding-left: $my_padding_left;
+    border: 1px solid;
+}
+
+.right form input:focus,
+.right form textarea:focus {
+    outline-color: #3498db;
+}
+
+.right form input {
+    height: 35px;
+}
+
+.right form .btn {
+    margin-top: 10px;
+}
+
+//style buttom som ligger på höger sida av footer
+.right form .btn button {
+    height: 40px;
+    width: $my_width;
+    border: none;
+    outline: none;
+    background:$my_background_color2;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+/* submit button hover */
+.right form .btn button:hover {
+    background: rgb(44, 221, 44);
+}
+
+.bottom center {
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #151515;
+}
+
+.bottom center span {
+    color: #656565;
+}
+
+.bottom center a {
+    color: $my_background_color2;
+    text-decoration: none;
+}
+
+.bottom center a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+    .main-content {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .box {
+        margin: 5px 0;
+    }
+}
+
+
+/*Andra sidan*/
+
+
+/*main content*/
+
+
+/*.img1 img {
+    background-size: cover;
+    width: 100%;
+}*/
+
+/* anropa funktionen till bildernas titel*/
+.img1 h2 {
+    @include img_h1();
+}
+
+.img2 h2 {
+    @include img_h1(); 
+}
+
+//style till bilder på sida 2
+.my-image {
+    max-width: $my_width;
+    width: $my_width;
+    height: 350px;
+    vertical-align: middle;
+    border: 3px solid $my_background_color;
+    object-fit: cover;
+}
+
+//hover på bilderna på sida 2
+.my-image:hover {
+    background: $my_background_color;
+    opacity: .7;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.row {
+    display: $my_display;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

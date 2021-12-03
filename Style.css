@@ -1,0 +1,338 @@
+@charset "UTF-8";
+/* skapa variabler */
+/* En funktion till bildernas titel p[ sida 2 (hundleksaker och kattleksaker)  */
+/* En funktion till fas och fab icon size*/
+/*body background*/
+body {
+  background-color: #f3f1ec !important;
+}
+
+/* Header med NAV-BAR */
+.nav a {
+  color: #0b2a02;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+}
+
+.nav {
+  background-color: #dbcebc;
+}
+
+/* JS JS JS */
+/*style till artiklarnas bild container */
+.imgContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30vw;
+}
+
+/*style till artiklernas bild  */
+.imgContainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 575px) {
+  .imgContainer {
+    height: 60vw;
+  }
+}
+
+/*font är bold på prisen*/
+.font-bold {
+  font-weight: bold;
+}
+
+/* text är green på artikelernas namn och pris*/
+.text-green {
+  color: #43770f;
+}
+
+/* swadow hover till artiklerna*/
+.shadow-hover:hover {
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* JS JS JS  */
+/* Carosel*/
+/* storlek till bilderna i caruselen*/
+.d-block {
+  width: 1500px;
+  height: 600px;
+}
+
+/*Text*/
+.info1-container {
+  margin: 2% 10% 2% 10%;
+  /* box-sizing: border-box; */
+}
+
+.info1-container a {
+  color: black;
+  font-weight: bold;
+}
+
+/* style container till sidans titel och texten på index och sida 2*/
+.h1-container {
+  background-color: #dbcebc;
+  color: #3b3a37;
+  text-align: left;
+  letter-spacing: 5px;
+  padding: 2px 2px 0 0;
+  color: #3b3a37;
+  margin: 3% 10% 0% 10%;
+}
+
+.display-4 {
+  margin: 0px 10px 0px 10px;
+}
+
+.main-h4 {
+  margin: 10px 0px 10px 0px;
+}
+
+/*  FOOOOOTER   */
+footer {
+  position: absolute;
+  width: 100%;
+  background: #dbcebc;
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-content .box {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 20px 50px 20px 50px;
+}
+
+.box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+.box .content:before {
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+
+.box .content:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #f3f1ec;
+  top: -10px;
+}
+
+.left .content p {
+  text-align: justify;
+}
+
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+
+.left .content .social a {
+  padding: 0 2px;
+}
+
+.left .content .social a span {
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  background: #1a1a1a;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
+}
+
+.left .content .social a span:hover {
+  background: firebrick;
+}
+
+.center .content .fas {
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  font-size: 1.4375rem;
+  background: #f3f1ec;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.center .content .fas:hover {
+  background: firebrick;
+}
+
+/* style text som ligger på center av footer */
+.center .content .text {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+/*style phone*/
+.center .content .phone {
+  margin: 15px 0;
+}
+
+.right form .text {
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: black;
+}
+
+.right form .msg {
+  margin-top: 10px;
+}
+
+.right form input,
+.right form textarea {
+  width: 100%;
+  font-size: 1.0625rem;
+  padding-left: 10px;
+  border: 1px solid;
+}
+
+.right form input:focus,
+.right form textarea:focus {
+  outline-color: #3498db;
+}
+
+.right form input {
+  height: 35px;
+}
+
+.right form .btn {
+  margin-top: 10px;
+}
+
+.right form .btn button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f3f1ec;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+/* submit button hover */
+.right form .btn button:hover {
+  background: #2cdd2c;
+}
+
+.bottom center {
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+
+.bottom center span {
+  color: #656565;
+}
+
+.bottom center a {
+  color: #f3f1ec;
+  text-decoration: none;
+}
+
+.bottom center a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-content .box {
+    margin: 5px 0;
+  }
+}
+
+/*Andra sidan*/
+/*main content*/
+/*.img1 img {
+    background-size: cover;
+    width: 100%;
+}*/
+/* anropa funktionen till bildernas titel*/
+.img1 h2 {
+  text-align: center;
+  margin: 100px 0px 0px 0px;
+}
+
+.img2 h2 {
+  text-align: center;
+  margin: 100px 0px 0px 0px;
+}
+
+.my-image {
+  max-width: 100%;
+  width: 100%;
+  height: 350px;
+  vertical-align: middle;
+  border: 3px solid #dbcebc;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.my-image:hover {
+  background: #dbcebc;
+  opacity: .7;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=Style.css.map */
